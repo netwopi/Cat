@@ -6,6 +6,11 @@ public class Cat
 
     private double minWeight;
     private double maxWeight;
+    private double amounth;
+
+    public double getAmounth() {
+        return amounth;
+    }
 
     public Cat()
     {
@@ -25,6 +30,7 @@ public class Cat
 
     public void feed(Double amount)
     {
+        amounth=getAmounth()+amount;
         weight = weight + amount;
     }
 
@@ -41,6 +47,7 @@ public class Cat
     {
         return weight;
     }
+
 
     public String getStatus()
     {
