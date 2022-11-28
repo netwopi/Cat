@@ -8,7 +8,7 @@ public class Loader
         cat.getStatus();
         System.out.println(cat.getStatus());
         double eatCat = 0 ;
-        for (int x = 0 ; x<20 ; x++){
+        for (int x = 0 ; x<1 ; x++){
             eatCat = eatCat + 100.00;
             cat.feed(eatCat);
             System.out.println(cat.getStatus());
@@ -19,5 +19,7 @@ public class Loader
 
             }
         }
+        System.out.println(cat.getWeight());
+        cat.pie();
     }
 }

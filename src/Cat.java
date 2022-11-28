@@ -32,6 +32,10 @@ public class Cat
     {
         weight = weight + amount;
     }
+    public void pie(){
+        weight=weight-0.1;
+        System.out.println("Я пописал и теперь мой вес " + weight );
+    }
 
     public Double getWeight()
     {
