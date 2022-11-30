@@ -27,7 +27,8 @@ public class Loader
         System.out.println("вес котика : "+cat.getWeight());
         cat.pie();
         System.out.println("всего сьел  : "+cat.getAmounth());
-
         System.out.println("всего : "+Cat.getCount()+ " котов .");
+        System.out.println(cat.getColor());
+        System.out.println(cat1.getColor());
     }
 }

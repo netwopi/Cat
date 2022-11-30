@@ -1,25 +1,40 @@
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Cat
 {
+    private String color;
+    public static final int LEGS_COUNT = 4;
+    public static final int NUMBER_OF_EYES = 4;
+    public static final double MIN_WEIGHT = 1000;
+    public static final double MAX_WEIGHT = 9000;
     private double originWeight;
     private double weight;
     public static int count;
-    private double minWeight;
-    private double maxWeight;
+
     private double amounth;
 
     public double getAmounth() {
         return amounth;
     }
 
+    public String getColor() {
+        return color;
+    }
+
     public Cat()
     {
+        Random rand = new Random();
         weight = 1500.0 + 1000.0 * Math.random();
         originWeight = weight;
-        minWeight = 1000.0;
-        maxWeight = 9000.0;
         count++;
-
+        List<String> enumNames = Stream.of(ColorCat.values())
+                .map(ColorCat::name)
+                .collect(Collectors.toList());
+        color = enumNames.get(rand.nextInt(enumNames.size()));
     }
 
     public static Integer getCount() {
@@ -56,11 +71,11 @@ public class Cat
 
     public String getStatus()
     {
-        if(weight < minWeight) {
+        if(weight < MIN_WEIGHT) {
             count--;
             return "Dead";
         }
-        else if(weight > maxWeight) {
+        else if(weight > MAX_WEIGHT) {
             count--;
             return "Exploded";
 
