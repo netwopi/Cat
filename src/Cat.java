@@ -25,10 +25,20 @@ public class Cat
         return color;
     }
 
-    public Cat()
-    {
+    public Cat() {
         Random rand = new Random();
         weight = 1500.0 + 1000.0 * Math.random();
+        originWeight = weight;
+        count++;
+        List<String> enumNames = Stream.of(ColorCat.values())
+                .map(ColorCat::name)
+                .collect(Collectors.toList());
+        color = enumNames.get(rand.nextInt(enumNames.size()));
+    }
+
+    public Cat(double weight) {
+        Random rand = new Random();
+        this.weight = weight;
         originWeight = weight;
         count++;
         List<String> enumNames = Stream.of(ColorCat.values())
@@ -86,5 +96,14 @@ public class Cat
         else {
             return "Playing";
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Cat{" +
+                "color='" + color + '\'' +
+                ", originWeight=" + originWeight +
+                ", weight=" + weight +
+                '}';
     }
 }

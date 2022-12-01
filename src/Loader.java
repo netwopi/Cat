@@ -4,7 +4,7 @@ public class Loader
     public static void main(String[] args)
     {
         Cat cat = new Cat();
-        Cat cat1 = new Cat();
+        Cat cat1 = new Cat(1000);
         Cat cat2 = new Cat();
         Cat cat3 = new Cat();
         Cat cat4 = new Cat();
@@ -13,7 +13,7 @@ public class Loader
         cat.getStatus();
         System.out.println(cat.getStatus());
         double eatCat = 0 ;
-        for (int x = 0 ; x<10 ; x++){
+        for (int x = 0 ; x<1 ; x++){
             eatCat =+ 100;
             cat.feed(eatCat);
             System.out.println(cat.getStatus());
@@ -29,6 +29,7 @@ public class Loader
         System.out.println("всего сьел  : "+cat.getAmounth());
         System.out.println("всего : "+Cat.getCount()+ " котов .");
         System.out.println(cat.getColor());
-        System.out.println(cat1.getColor());
+        System.out.println(cat1.toString());
+        System.out.println(cat.toString());
     }
 }
