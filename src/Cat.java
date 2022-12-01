@@ -47,6 +47,13 @@ public class Cat
         color = enumNames.get(rand.nextInt(enumNames.size()));
     }
 
+    public Cat(String color, double originWeight, double weight, double amounth) {
+        this.color = color;
+        this.originWeight = originWeight;
+        this.weight = weight;
+        this.amounth = amounth;
+    }
+
     public static Integer getCount() {
         return count;
     }

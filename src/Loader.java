@@ -29,7 +29,8 @@ public class Loader
         System.out.println("всего сьел  : "+cat.getAmounth());
         System.out.println("всего : "+Cat.getCount()+ " котов .");
         System.out.println(cat.getColor());
-        System.out.println(cat1.toString());
         System.out.println(cat.toString());
+        Cat cat6 = new Cat(cat.getColor(),cat.getOriginWeight(),cat.getWeight(),cat.getAmounth());
+        System.out.println(cat6.toString());
     }
 }
