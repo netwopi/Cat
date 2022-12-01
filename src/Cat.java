@@ -106,4 +106,28 @@ public class Cat
                 ", weight=" + weight +
                 '}';
     }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public double getOriginWeight() {
+        return originWeight;
+    }
+
+    public void setOriginWeight(double originWeight) {
+        this.originWeight = originWeight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public static void setCount(int count) {
+        Cat.count = count;
+    }
+
+    public void setAmounth(double amounth) {
+        this.amounth = amounth;
+    }
 }
